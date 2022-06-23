@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section-padding" id="about">
+    {% for i in abouts %}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-12">
+                <h2 class="mb-lg-3 mb-3">{{ i.name1 }}</h2>
+
+                <p>{{ i.about1 }}</p>
+
+                <p>{{ i.about2 }}<a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">support us a little</a> via PayPal if this template is good and useful for your work.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                <div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
+                    <p class="featured-text"><span class="featured-number">{{ i.year }}</span> {{ i.name2 }}<br> {{ i.name3 }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="gallery">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-6 ps-0">
+                <img src="{{ i.img1.url }}" class="img-fluid galleryImage" alt="get a vaccine" title="get a vaccine for yourself">
+            </div>
+
+            <div class="col-lg-6 col-6 pe-0">
+                <img src="{{ i.img2.url }}" class="img-fluid galleryImage" alt="wear a mask" title="wear a mask to protect yourself">
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+
+{% endblock %}
